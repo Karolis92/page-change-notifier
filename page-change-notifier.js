@@ -29,6 +29,9 @@ module.exports = class PageChangeNotifier {
                 }
                 this.previousResp = response;
                 setTimeout(() => this.doScan(), this.interval);
+            })
+            .catch((error) => {
+                console.log('Error occurred while scaning page...', error);
             });
     }
 
