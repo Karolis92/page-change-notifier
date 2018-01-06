@@ -30,7 +30,7 @@ module.exports = class PageChangeNotifier {
                 setTimeout(() => this.doScan(), this.interval);
             })
             .catch((error) => {
-                console.log('Error occurred while scaning page...', error);
+                console.log('Error occurred while scanning page...', error);
             });
     }
 
