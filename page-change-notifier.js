@@ -10,7 +10,7 @@ module.exports = class PageChangeNotifier {
         this.smtp = args.s;
 
         if (!this.url) throw Error('no url defined (-u)');
-        if (!this.from) throw Error('no to defined (-f)');
+        if (!this.from) throw Error('no from defined (-f)');
         if (!this.to) throw Error('no to defined (-t)');
         if (!this.smtp) throw Error('no smtp defined (-s)');
     }
