@@ -16,7 +16,6 @@ module.exports = class PageChangeNotifier {
     }
 
     run() {
-        this.mailer = nodemailer.createTransport(this.smtp);
         this.doScan();
     }
 
@@ -37,13 +36,16 @@ module.exports = class PageChangeNotifier {
 
     notify() {
         console.log("change detected! Sending email.");
+        
         var message = {
             from: this.from,
             to: this.to,
             subject: "Page change detected!",
             text: `Page change detected in ${this.url}`
         };
-        this.mailer.sendMail(message, (error) => {
+
+        const mailer = nodemailer.createTransport(this.smtp);
+        mailer.sendMail(message, (error) => {
             if (error) {
                 console.log('Error occurred while sending email...', error);
             }
