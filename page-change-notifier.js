@@ -24,10 +24,10 @@ module.exports = class PageChangeNotifier {
         console.log("tick");
         request(this.url)
             .then((response) => {
-                if (this.previousRes && this.previousRes !== response) {
+                if (this.previousResp && this.previousResp !== response) {
                     this.notify();
                 }
-                this.previousRes = response;
+                this.previousResp = response;
                 setTimeout(() => this.doScan(), this.interval);
             });
     }
@@ -38,7 +38,7 @@ module.exports = class PageChangeNotifier {
             from: this.from,
             to: this.to,
             subject: "Page change detected!",
-            text: `Page change detected in ${this.url} ${response}`
+            text: `Page change detected in ${this.url}`
         };
         this.mailer.sendMail(message, (error) => {
             if (error) {
