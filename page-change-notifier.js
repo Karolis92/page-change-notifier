@@ -35,7 +35,7 @@ module.exports = class PageChangeNotifier {
     }
 
     notify() {
-        console.log("change detected! Sending email.");
+        console.log("Change detected! Sending email.");
         
         var message = {
             from: this.from,
