@@ -1,5 +1,4 @@
-const PageChangeNotifier = require('./page-change-notifier.js');
-const args = require('minimist')(process.argv.slice(2));
+const PageChangeNotifier = require('./lib/page-change-notifier.js');
 
-const pageChangeNotifier = new PageChangeNotifier(args);
+const pageChangeNotifier = new PageChangeNotifier();
 pageChangeNotifier.run();

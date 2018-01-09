@@ -1,19 +1,12 @@
 ### ABOUT
 
-Simple Node.js app, that scans webpage every N milliseconds and sends email if change was detected.
-It compares just response text, no dynamically loaded content will be compared.
+Simple Node.js app, that scans text in webpage every N milliseconds and sends email with screenshot if change was detected.
 
-Args:
-```
--u    url of page to scan
--i    interval to scan page at in milliseconds (defaults to 300000 (5 min))
--s    smtp connection url with user details
--f    from:
--t    to:
-```
+Warining: code executes 'body.textContent' to get text for comparison, so it will have hidden text in it and will not detect image and small layout changes etc.
 
-### USAGE EXAMPLE
+All configurable properties are at app.config
 
+To start app execute:
 ```
-node start.js -u http://www.google.com -i 2000 -s smtps://user%40gmail.com:pass@smtp.gmail.com -f user@gmail.com -t touser@gmail.com
+node start.js
 ```

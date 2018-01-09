@@ -4,9 +4,9 @@
     "main": "start.js",
     "author": "Karolis92",
     "dependencies": {
-        "minimist": "1.2.0",
+        "chrome-launcher": "0.10.1",
+        "chrome-remote-interface": "0.25.5",
         "nodemailer": "4.4.1",
-        "request": "2.83.0",
-        "request-promise-native": "1.0.5"
+        "properties": "1.2.1"
     }
 }
