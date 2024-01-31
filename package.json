@@ -6,7 +6,7 @@
     "dependencies": {
         "chrome-launcher": "0.10.1",
         "chrome-remote-interface": "0.25.5",
-        "nodemailer": "4.4.1",
+        "nodemailer": "6.9.8",
         "properties": "1.2.1"
     }
 }
